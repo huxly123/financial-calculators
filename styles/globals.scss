@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Nexa-Regular";
+  src: url("https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/fonts/Nexa-Regular.woff2");
+  font-display: swap;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Nexa-Regular", sans-serif;
+}

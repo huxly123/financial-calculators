@@ -1,0 +1,127 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard-with-typescript",
+    "react-app",
+    "airbnb",
+    "plugin:@next/next/recommended",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "overrides": [],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "rules": {
+    // 0 -> off | 1 -> warn | 2 -> error
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": "off",
+    "camelcase": [
+      "error",
+      {
+        "properties": "always",
+        "ignoreDestructuring": true,
+        "ignoreImports": false
+      }
+    ],
+    "import/prefer-default-export": "error",
+    "func-names": "error",
+    "comma-dangle": "error",
+    "consistent-return": ["error", { "treatUndefinedAsUnspecified": true }],
+    "no-return-assign": ["error", "except-parens"],
+    "arrow-body-style": ["error", "as-needed"],
+    "object-shorthand": ["warn", "consistent"],
+    "object-curly-newline": "off",
+    "operator-linebreak": [
+      "error",
+      "after",
+      { "overrides": { "?": "before", ":": "before" } }
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "no-var": "error",
+    "no-unused-vars": "off",
+    "default-param-last": "off",
+    "@typescript-eslint/default-param-last": "off",
+    "@typescript-eslint/no-inferrable-types": [
+      "error",
+      { "ignoreParameters": true }
+    ],
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "@typescript-eslint/no-confusing-void-expression": ["off"],
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/array-type": [
+      "error",
+      { "default": "array", "readonly": "array" }
+    ],
+    "@typescript-eslint/no-floating-promises": [
+      "error",
+      { "ignoreIIFE": true }
+    ],
+    "no-unused-expressions": [
+      "warn",
+      {
+        "allowTaggedTemplates": true
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "prefer-const": [
+      "warn",
+      {
+        "destructuring": "all"
+      }
+    ],
+
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    "react/jsx-props-no-spreading": "warn",
+    "react/jsx-one-expression-per-line": "off",
+    "react/destructuring-assignment": ["error", "always"],
+    "react/function-component-definition": [
+      "error",
+      { "namedComponents": "arrow-function" }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["to"]
+      }
+    ],
+    // Consider turning on when focusing on accessibility
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/control-has-associated-label": "off",
+    "react/no-unescaped-entities": "off",
+    "operator-assignment": "off",
+    "@typescript-eslint/restrict-plus-operands": "off",
+    "jsx-a11y/mouse-events-have-key-events": "off"
+  }
+}
