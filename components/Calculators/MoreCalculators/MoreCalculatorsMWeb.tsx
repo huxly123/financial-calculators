@@ -5,9 +5,7 @@ import moreCalculatorsData from "./data";
 
 const MoreCalculatorsMWeb: React.FC = () => (
   <div className="lg:hidden px-6 bg-white py-6 rounded-t-2xl">
-    <h2 className="font-extrabold text-2xl text-black mb-6">
-      More Calculators
-    </h2>
+    <h2 className="font-extrabold text-2xl text-black mb-6">Calculators</h2>
     <div className="flex flex-col gap-6">
       {Object.entries(moreCalculatorsData).map(([category, calculators]) => (
         <div key={category} className="flex flex-col gap-6">
