@@ -1,0 +1,36 @@
+.radioSelector {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+.checkedRadio {
+  border: 2px solid #6b91fc;
+  &::before {
+    background-color: #6b91fc;
+    opacity: 1;
+  }
+}
+
+.uncheckedRadio {
+  border: 2px solid #a4a5ab;
+  &::before {
+    background-color: transparent;
+    opacity: 0;
+  }
+}
